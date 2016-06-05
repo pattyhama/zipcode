@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  zipcode
 //
-//  Created by 浜岡春見 on 2016/06/05.
-//  Copyright © 2016年 pattyhama. All rights reserved.
+//  Created by Harumi Hamaoka on 2016/06/05.
+//  Copyright © 2016 pattyhama. All rights reserved.
 //
 
 import UIKit
