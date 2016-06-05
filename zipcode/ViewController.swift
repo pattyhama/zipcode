@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     }
 
     @IBOutlet weak var zipTextField: UITextField!
+    @IBOutlet weak var prefLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
 
     @IBAction func tapReturn() {
     }
@@ -48,7 +50,9 @@ class ViewController: UIViewController {
                 // If the code item is integer, it's a code information from Address-Search API
                 if code != 200 {
                     if let errmsg = jsonDic["message"] as? String {
-                        print(errmsg)
+                        dispatch_async(dispatch_get_main_queue()) {
+                            self.prefLabel.text = errmsg
+                        }
                     }
                 }
             }
@@ -56,15 +60,22 @@ class ViewController: UIViewController {
                 // Analyze if the data item is dictionary data
                 if let pref = data["pref"] as? String {
                     // If the code item is string, it's a prefecture
-                    print("Prefecture is \(pref)")
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.prefLabel.text = pref
+                    }
                 }
                 if let address = data["address"] as?String {
                     // If the code item is string, it's an address
-                    print("Address is \(address)")
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.addressLabel.text = address
+                    }
                 }
             }
         } catch {
-            print("Error")
+            // Run when JSON-parse fails
+            dispatch_async(dispatch_get_main_queue()) {
+                self.addressLabel.text = "Error"
+            }
         }
     }
     
@@ -73,4 +84,3 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 }
-

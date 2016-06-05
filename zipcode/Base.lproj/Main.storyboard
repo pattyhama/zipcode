@@ -98,6 +98,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addressLabel" destination="gv6-Tu-TZ0" id="Oz7-43-V1s"/>
+                        <outlet property="prefLabel" destination="myh-LR-cLR" id="TSq-aj-4t4"/>
                         <outlet property="zipTextField" destination="tAQ-LU-rEz" id="mjP-Zv-Q3q"/>
                     </connections>
                 </viewController>
