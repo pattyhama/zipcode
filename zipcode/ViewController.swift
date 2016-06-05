@@ -25,17 +25,28 @@ class ViewController: UIViewController {
             // End if value is nil
             return
         }
-        
         // Create requested URL
         let urlStr = "http://api.zipaddress.net/?zipcode=\(ziptext)"
-        print(urlStr)
+        
+        if let url = NSURL(string: urlStr) {
+            // If url object is not nil, create Search Process object
+            let urlSession = NSURLSession.sharedSession()
+            // If Search Process object is completed, create a task to call onGetAddress
+            let task = urlSession.dataTaskWithURL(url, completionHandler: self.onGetAddress)
+            // Run task
+            task.resume()
+        }
+    }
+
+    // Run after search is Search Process is completed
+    func onGetAddress(data: NSData?, res: NSURLResponse?, error: NSError?){
+        // Show data to confirm
+        print(data)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
