@@ -22,6 +22,9 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <action selector="tapReturn" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="M4L-IV-dug"/>
+                                </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-Fv-4e7">
                                 <rect key="frame" x="246" y="106" width="108" height="30"/>
@@ -30,6 +33,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="108" height="30"/>
                                         <animations/>
                                         <state key="normal" title="Search Address"/>
+                                        <connections>
+                                            <action selector="tapSearch" destination="BYZ-38-t0r" eventType="touchUpInside" id="OKI-z2-P1T"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
@@ -91,6 +97,9 @@
                             <constraint firstItem="ofa-Fv-4e7" firstAttribute="top" secondItem="tAQ-LU-rEz" secondAttribute="bottom" constant="16" id="usd-aR-Ttd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="zipTextField" destination="tAQ-LU-rEz" id="mjP-Zv-Q3q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
