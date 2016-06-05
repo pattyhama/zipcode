@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  zipcode
 //
-//  Created by 浜岡春見 on 2016/06/05.
-//  Copyright © 2016年 pattyhama. All rights reserved.
+//  Created by Harumi Hamaoka on 2016/06/05.
+//  Copyright © 2016 pattyhama. All rights reserved.
 //
 
 import UIKit
@@ -40,8 +40,32 @@ class ViewController: UIViewController {
 
     // Run after search is Search Process is completed
     func onGetAddress(data: NSData?, res: NSURLResponse?, error: NSError?){
-        // Show data to confirm
-        print(data)
+        do {
+            // JSON-parse the received data
+            let jsonDic = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers ) as! NSDictionary
+            // Analyze the parsed data
+            if let code = jsonDic["code"] as? Int {
+                // If the code item is integer, it's a code information from Address-Search API
+                if code != 200 {
+                    if let errmsg = jsonDic["message"] as? String {
+                        print(errmsg)
+                    }
+                }
+            }
+            if let data = jsonDic["data"] as? NSDictionary {
+                // Analyze if the data item is dictionary data
+                if let pref = data["pref"] as? String {
+                    // If the code item is string, it's a prefecture
+                    print("Prefecture is \(pref)")
+                }
+                if let address = data["address"] as?String {
+                    // If the code item is string, it's an address
+                    print("Address is \(address)")
+                }
+            }
+        } catch {
+            print("Error")
+        }
     }
     
     override func didReceiveMemoryWarning() {
