@@ -64,7 +64,7 @@ class ViewController: UIViewController {
                         self.prefLabel.text = pref
                     }
                 }
-                if let address = data["address"] as?String {
+                if let address = data["address"] as? String {
                     // If the code item is string, it's an address
                     dispatch_async(dispatch_get_main_queue()) {
                         self.addressLabel.text = address
