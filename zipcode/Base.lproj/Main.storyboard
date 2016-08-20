@@ -1,11 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VRo-rZ-NTi">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Current Location-->
+        <scene sceneID="7n0-2H-OhV">
+            <objects>
+                <viewController id="vkq-kB-cjR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rRe-ID-bgB"/>
+                        <viewControllerLayoutGuide type="bottom" id="5jw-Hi-d1g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WBa-Ut-KTy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9Rq-hp-BIc">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Rq-hp-BIc" firstAttribute="top" secondItem="WBa-Ut-KTy" secondAttribute="top" id="73A-ql-l5a"/>
+                            <constraint firstItem="5jw-Hi-d1g" firstAttribute="top" secondItem="9Rq-hp-BIc" secondAttribute="bottom" id="7rb-2P-TT8"/>
+                            <constraint firstItem="9Rq-hp-BIc" firstAttribute="leading" secondItem="WBa-Ut-KTy" secondAttribute="leading" id="9Na-VZ-Slm"/>
+                            <constraint firstAttribute="trailing" secondItem="9Rq-hp-BIc" secondAttribute="trailing" id="LFu-u1-DEL"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Current Location" id="S4d-TC-vPB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QBh-AN-4tV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-221" y="-1112"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7Cr-Hk-aAs">
+            <objects>
+                <tabBarController id="VRo-rZ-NTi" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Aig-ea-AdF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vkq-kB-cjR" kind="relationship" relationship="viewControllers" id="FK6-Gb-bwf"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="aZt-ep-qTc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0sF-YH-K67" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1165" y="23"/>
+        </scene>
+        <!--Zip Code-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="zipcode" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +67,6 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write zipcode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tAQ-LU-rEz">
                                 <rect key="frame" x="20" y="60" width="560" height="30"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <connections>
@@ -31,25 +78,21 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qZ-Ki-J53">
                                         <rect key="frame" x="0.0" y="0.0" width="108" height="30"/>
-                                        <animations/>
                                         <state key="normal" title="Search Address"/>
                                         <connections>
                                             <action selector="tapSearch" destination="BYZ-38-t0r" eventType="touchUpInside" id="OKI-z2-P1T"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <animations/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AL-3h-lej">
-                                <rect key="frame" x="20" y="294.5" width="63" height="20.5"/>
-                                <animations/>
+                                <rect key="frame" x="20" y="295" width="63" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gv6-Tu-TZ0">
                                 <rect key="frame" x="20" y="335" width="560" height="24"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.87308031320571899" green="0.91704529523849487" blue="0.96285384893417358" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="Osk-IQ-4to"/>
@@ -59,8 +102,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myh-LR-cLR">
-                                <rect key="frame" x="20" y="250.5" width="560" height="24"/>
-                                <animations/>
+                                <rect key="frame" x="20" y="251" width="560" height="24"/>
                                 <color key="backgroundColor" red="0.87308031320571899" green="0.91704529523849487" blue="0.96285384893417358" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="Tfy-pf-Lno"/>
@@ -70,14 +112,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prefecture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyI-fd-ctL">
-                                <rect key="frame" x="20" y="210" width="80.5" height="20.5"/>
-                                <animations/>
+                                <rect key="frame" x="20" y="210" width="81" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tAQ-LU-rEz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3ci-If-J6j"/>
@@ -97,6 +137,7 @@
                             <constraint firstItem="ofa-Fv-4e7" firstAttribute="top" secondItem="tAQ-LU-rEz" secondAttribute="bottom" constant="16" id="usd-aR-Ttd"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Zip Code" id="qkg-8k-h0F"/>
                     <connections>
                         <outlet property="addressLabel" destination="gv6-Tu-TZ0" id="Oz7-43-V1s"/>
                         <outlet property="prefLabel" destination="myh-LR-cLR" id="TSq-aj-4t4"/>
@@ -105,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="176" y="339"/>
+            <point key="canvasLocation" x="-164" y="18"/>
         </scene>
     </scenes>
 </document>

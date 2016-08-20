@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3A1AB1189B00F7837320C06644323242E0D24BA1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "741D672965FFA1A9684B218E503A8C243118AA61" : 0,
+    "3A1AB1189B00F7837320C06644323242E0D24BA1" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "83C4848D-D083-4E44-968A-E754B53EBA75",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "741D672965FFA1A9684B218E503A8C243118AA61" : "yuze-pilgrimage\/pilgrimage\/",
+    "3A1AB1189B00F7837320C06644323242E0D24BA1" : "zipcode\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "zipcode",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "zipcode.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pattyhama\/zipcode.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3A1AB1189B00F7837320C06644323242E0D24BA1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/gitlab.com\/satouyuze\/pilgrimage.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "741D672965FFA1A9684B218E503A8C243118AA61"
+    }
+  ]
+}

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class ViewController: UIViewController {
 
@@ -14,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     @IBOutlet weak var zipTextField: UITextField!
     @IBOutlet weak var prefLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
