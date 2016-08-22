@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Current Location-->
+        <!--View Controller2-->
         <scene sceneID="7n0-2H-OhV">
             <objects>
                 <viewController id="vkq-kB-cjR" customClass="ViewController2" customModule="zipcode" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,7 +29,7 @@
                             <constraint firstAttribute="trailing" secondItem="9Rq-hp-BIc" secondAttribute="trailing" id="LFu-u1-DEL"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Current Location" id="S4d-TC-vPB"/>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="S4d-TC-vPB"/>
                     <connections>
                         <outlet property="mapView" destination="9Rq-hp-BIc" id="JIq-zW-GXx"/>
                     </connections>
