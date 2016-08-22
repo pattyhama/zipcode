@@ -8,7 +8,7 @@
         <!--Current Location-->
         <scene sceneID="7n0-2H-OhV">
             <objects>
-                <viewController id="vkq-kB-cjR" sceneMemberID="viewController">
+                <viewController id="vkq-kB-cjR" customClass="ViewController2" customModule="zipcode" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rRe-ID-bgB"/>
                         <viewControllerLayoutGuide type="bottom" id="5jw-Hi-d1g"/>
@@ -30,6 +30,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Current Location" id="S4d-TC-vPB"/>
+                    <connections>
+                        <outlet property="mapView" destination="9Rq-hp-BIc" id="JIq-zW-GXx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBh-AN-4tV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,7 +56,7 @@
             </objects>
             <point key="canvasLocation" x="-1165" y="23"/>
         </scene>
-        <!--Zip Code-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="zipcode" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,14 +68,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write zipcode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tAQ-LU-rEz">
-                                <rect key="frame" x="20" y="60" width="560" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
-                                <connections>
-                                    <action selector="tapReturn" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="M4L-IV-dug"/>
-                                </connections>
-                            </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-Fv-4e7">
                                 <rect key="frame" x="246" y="106" width="108" height="30"/>
                                 <subviews>
@@ -117,6 +112,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type zipcode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tAQ-LU-rEz">
+                                <rect key="frame" x="20" y="60" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <action selector="tapReturn" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="M4L-IV-dug"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -137,7 +140,7 @@
                             <constraint firstItem="ofa-Fv-4e7" firstAttribute="top" secondItem="tAQ-LU-rEz" secondAttribute="bottom" constant="16" id="usd-aR-Ttd"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Zip Code" id="qkg-8k-h0F"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="qkg-8k-h0F"/>
                     <connections>
                         <outlet property="addressLabel" destination="gv6-Tu-TZ0" id="Oz7-43-V1s"/>
                         <outlet property="prefLabel" destination="myh-LR-cLR" id="TSq-aj-4t4"/>
