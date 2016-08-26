@@ -27,7 +27,7 @@
 		0F59A1291D6B5DF900169AF0 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		0F59A12B1D6B695000169AF0 /* CurrentLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentLocation.swift; sourceTree = "<group>"; };
 		0F8F6FA41D68AA4300F773A0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		0F8F6FA61D68AE7200F773A0 /* zipcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zipcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F8F6FA61D68AE7200F773A0 /* Pilgrimage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pilgrimage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +47,7 @@
 			children = (
 				0F8F6FA41D68AA4300F773A0 /* MapKit.framework */,
 				0F4F0BA11D041ACD00408905 /* zipcode */,
-				0F8F6FA61D68AE7200F773A0 /* zipcode.app */,
+				0F8F6FA61D68AE7200F773A0 /* Pilgrimage.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,9 +69,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0F4F0B9E1D041ACD00408905 /* zipcode */ = {
+		0F4F0B9E1D041ACD00408905 /* Pilgrimage */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F4F0BB11D041ACD00408905 /* Build configuration list for PBXNativeTarget "zipcode" */;
+			buildConfigurationList = 0F4F0BB11D041ACD00408905 /* Build configuration list for PBXNativeTarget "Pilgrimage" */;
 			buildPhases = (
 				0F4F0B9B1D041ACD00408905 /* Sources */,
 				0F4F0B9C1D041ACD00408905 /* Frameworks */,
@@ -81,9 +81,9 @@
 			);
 			dependencies = (
 			);
-			name = zipcode;
+			name = Pilgrimage;
 			productName = zipcode;
-			productReference = 0F8F6FA61D68AE7200F773A0 /* zipcode.app */;
+			productReference = 0F8F6FA61D68AE7200F773A0 /* Pilgrimage.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -114,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0F4F0B9E1D041ACD00408905 /* zipcode */,
+				0F4F0B9E1D041ACD00408905 /* Pilgrimage */,
 			);
 		};
 /* End PBXProject section */
@@ -287,7 +287,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0F4F0BB11D041ACD00408905 /* Build configuration list for PBXNativeTarget "zipcode" */ = {
+		0F4F0BB11D041ACD00408905 /* Build configuration list for PBXNativeTarget "Pilgrimage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F4F0BB21D041ACD00408905 /* Debug */,
