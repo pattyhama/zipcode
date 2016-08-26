@@ -14,7 +14,6 @@
 		0F4F0BAD1D041ACD00408905 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F4F0BAB1D041ACD00408905 /* LaunchScreen.storyboard */; };
 		0F59A12A1D6B5DF900169AF0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F59A1291D6B5DF900169AF0 /* MapView.swift */; };
 		0F59A12C1D6B695000169AF0 /* CurrentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F59A12B1D6B695000169AF0 /* CurrentLocation.swift */; };
-		0F59A12E1D6B72A400169AF0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F59A12D1D6B72A400169AF0 /* CoreLocation.framework */; };
 		0F8F6FA51D68AA4300F773A0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8F6FA41D68AA4300F773A0 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +26,6 @@
 		0F4F0BAE1D041ACD00408905 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F59A1291D6B5DF900169AF0 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		0F59A12B1D6B695000169AF0 /* CurrentLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentLocation.swift; sourceTree = "<group>"; };
-		0F59A12D1D6B72A400169AF0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0F8F6FA41D68AA4300F773A0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0F8F6FA61D68AE7200F773A0 /* zipcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zipcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -37,7 +35,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F59A12E1D6B72A400169AF0 /* CoreLocation.framework in Frameworks */,
 				0F8F6FA51D68AA4300F773A0 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,7 +45,6 @@
 		0F4F0B961D041ACD00408905 = {
 			isa = PBXGroup;
 			children = (
-				0F59A12D1D6B72A400169AF0 /* CoreLocation.framework */,
 				0F8F6FA41D68AA4300F773A0 /* MapKit.framework */,
 				0F4F0BA11D041ACD00408905 /* zipcode */,
 				0F8F6FA61D68AE7200F773A0 /* zipcode.app */,
